@@ -1,85 +1,83 @@
 
 
 /*
-Author: Bootstrapthemes
-Author URI: http://www.xpeedstudio.com
+Author: XpeedStudio
+Author URI: http://www.Xpeedstudio.com
 */
 
 /* Portrait tablets and medium desktops */
-@media (min-width: 992px) and (max-width: 1199px) {
-    body {
-        font-size: 1rem;
+@media (max-width: 1199px) {
+
+    .main_contactus_area input[type=submit] {
+        width: 30%;
     }
-
-
-
-
-
-
 }
-
-
 
 /* Portrait tablets and small desktops */
 @media (max-width: 991px) {
+    html {
+        font-size: 90%;
+    }
+    .list-inline>li {
+        display: inline-block;
+        padding-right: 3px;
+        padding-left: 3px;
+    }
 
-    .sm-text-center{
-        text-align: center !important;
-    }
-    .sm-pull-none{
-        float: none !important;
-    }
-    .sm-m-top-10{
-        margin-top:10px;
-    }
-    .sm-m-top-20{
-        margin-top:20px;
-    }
-    .sm-m-top-30{
-        margin-top:30px;
-    }
-    .sm-m-top-50{
-        margin-top:50px;
+    .main_service_content .single_service {
+        margin-top: 0%;
     }
 
 
+    .main_contactus_area input[type=submit] {
+        width: 35%;
+    }
+    .ourmap {
+        height: 653px;
+    }
+    .main_footer .footer_logo a img {
+        width: 100%;
+    }
 
 }
+
 
 
 
 /* Landscape phones and portrait tablets */
 @media  (max-width: 768px) {
-    h2{
-        font-size:2rem;
+    html {
+        font-size: 90%;
     }
-    p{
-        font-size:90%;
-        line-height: 2rem;
+    .cd-header a.brand-logo img {
+        width: 10%;
     }
-    .xs-pull-none{
-        float: none !important;
+    #main-nav li a{
+        padding: 2% 10%;
     }
-    .xs-text-center{
-        text-align: center !important;
+    .main_service_content img{
+        width:100%;
     }
-    .xs-m-top-10{
-        margin-top:10px;
+    .main_service_content .single_service {
+        margin-top: 5%;
+        padding: 0% 2%;
     }
-    .xs-m-bottom-10{
-        margin-bottom:10px;
-    }
-    .xs-m-bottom-20{
-        margin-bottom:20px;
-    }
-    .main_testimonial .testimonial_slid .slick-arrow.nextprevright {
-        top: -150px;
+    .single_service.single_service_left_text {
+        margin-left: 0%;
     }
 
+    .main_blog_area .single_blog_menu ul {
+        margin-top: 10%;
+    }
+    .single_blog_img img{
+        width:100%;
+    }
+
+    .main_footer .footer_logo a img {
+        width: 20%;
+    }
 
 }
-
-
 
 
 /* Landscape phones and smaller */
@@ -87,30 +85,30 @@ Author URI: http://www.xpeedstudio.com
     html {
         font-size: 85%;
     }
-    .testimonial_slid .slick-arrow {
-        display: none;
-    }
-
-}
-
-
-
-
-
-@media (max-width: 400px) {
 
 
 }
+
+
+
 
 @media (max-width: 320px) {
-    html {
-        font-size: 60.5%;
-    }
-    .btn.btnxs{
-        padding:2.01rem 1.5rem;
-    }
 
+    html {
+        font-size: 70.5%;
+    }
+    .main_contactus_area input[type=submit] {
+        width: 40%;
+    }
 }
+
+
+@media (max-width: 852px){
+    .ourmap {
+        height: 680px;
+    }
+}
+
 
 
 
