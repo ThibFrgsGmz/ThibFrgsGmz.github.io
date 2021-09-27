@@ -33,8 +33,58 @@ Author URI: http://bootstrapthemes.co
  11.  MONTSERRAT BOLD
 
 ==========================================*/
-
-
+:root {
+    --bs-blue: #2937f0;
+    --bs-indigo: #6610f2;
+    --bs-purple: #9f1ae2;
+    --bs-pink: #d63384;
+    --bs-red: #dc3545;
+    --bs-orange: #fd7e14;
+    --bs-yellow: #ffc107;
+    --bs-green: #198754;
+    --bs-teal: #20c997;
+    --bs-cyan: #0dcaf0;
+    --bs-white: #fff;
+    --bs-gray: #6c757d;
+    --bs-gray-dark: #343a40;
+    --bs-gray-100: #f8f9fa;
+    --bs-gray-200: #e9ecef;
+    --bs-gray-300: #dee2e6;
+    --bs-gray-400: #ced4da;
+    --bs-gray-500: #adb5bd;
+    --bs-gray-600: #6c757d;
+    --bs-gray-700: #495057;
+    --bs-gray-800: #343a40;
+    --bs-gray-900: #212529;
+    --bs-primary: #2937f0;
+    --bs-secondary: #9f1ae2;
+    --bs-success: #198754;
+    --bs-info: #0dcaf0;
+    --bs-warning: #ffc107;
+    --bs-danger: #dc3545;
+    --bs-light: #f8f9fa;
+    --bs-dark: #212529;
+    --bs-primary-rgb: 41, 55, 240;
+    --bs-secondary-rgb: 159, 26, 226;
+    --bs-success-rgb: 25, 135, 84;
+    --bs-info-rgb: 13, 202, 240;
+    --bs-warning-rgb: 255, 193, 7;
+    --bs-danger-rgb: 220, 53, 69;
+    --bs-light-rgb: 248, 249, 250;
+    --bs-dark-rgb: 33, 37, 41;
+    --bs-white-rgb: 255, 255, 255;
+    --bs-black-rgb: 0, 0, 0;
+    --bs-body-rgb: 33, 37, 41;
+    --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+    --bs-body-font-family: Mulish, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    --bs-body-font-size: 1rem;
+    --bs-body-font-weight: 500;
+    --bs-body-line-height: 1.5;
+    --bs-body-color: #212529;
+    --bs-body-bg: #fff;
+  }
 
 /* ==========================================================================
    Author's custom styles
@@ -44,8 +94,12 @@ html,
 body {
     background-color: #fff;
     font-size: 14px;
-    font-family: 'Raleway', sans-serif;
-    color: #231f20;
+    font-family: var(--bs-body-font-family);
+    font-family: var(--bs-body-font-family);
+    font-size: var(--bs-body-font-size);
+    font-weight: var(--bs-body-font-weight);
+    line-height: var(--bs-body-line-height);
+    line-height: var(--bs-dark);
     width: 100%;
     padding: 0;
     margin-left: 0;
@@ -55,6 +109,8 @@ body {
     -webkit-font-smoothing: antialiased;
     font-weight: 300;
 }
+
+
 /*==========================================
 PRE LOADER 
 ==========================================*/
@@ -563,6 +619,95 @@ nav ul li {
     text-transform: uppercase;
 }
 
+/*=====================================================================
+                    TEST Section 
+====================================================================*/
+.glowing_border_button
+{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: line;
+}
+.glowing_border_button a
+{
+    position: relative;
+    width: 160px;
+    height:60px;
+    display: inline-block;
+    background-color: #fff;
+    margin: 20px;
+}
+
+.glowing_border_button a:before,
+.glowing_border_button a:after
+{
+    content:'';
+    position:absolute;
+    inset:0;
+    background: #f00;
+    transition:0.5s;
+}
+
+.glowing_border_button a:nth-child(1):before,
+.glowing_border_button a:nth-child(1):after
+{
+    background:linear-gradient(45deg,#00CCFF, #0e1538, #0e1538, #D400D4);
+}
+
+.glowing_border_button a:nth-child(2):before,
+.glowing_border_button a:nth-child(2):after
+{
+    background:linear-gradient(45deg,#FF075B, #0e1538, #0e1538, #1AFF22);
+}
+
+.glowing_border_button a:hover:before
+{
+    inset:-3px;
+}
+
+.glowing_border_button a:hover:after
+{
+    inset:-3px;
+    filter:blur(10px);
+}
+
+.glowing_border_button a span
+{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    display: inline-block;
+    background:#0e1538;
+    z-index:10;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color:#FFF;
+    border:1px solid #040A29;
+    overflow: hidden;
+
+}
+
+
+.glowing_border_button a span::before
+{
+
+    content:'';
+    position:absolute;
+    top:0;
+    left:-50%;
+    width:100%;
+    height:100%;
+    background: rgba(255,255,255,0.075);
+    transform:skew(25deg);
+
+}
 /*=====================================================================
                     Blog Section 
 ====================================================================*/
